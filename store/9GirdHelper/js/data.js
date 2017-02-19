@@ -8,12 +8,14 @@
         appVersion: '1.0 (build 170217)',
         appID:"com.romanysoft.app.macos.DataStorm",
         documentTitle:appName,
-        supportPlatforms: appName + " works on MacOSX 10.7, MacOSX 10.8",
+        supportPlatforms: appName + " works on MacOSX 10.7, MacOSX 10.8, MacOSX10.9, MacOSX10.10, MacOSX10.11," +
+        " MacOSX10.12",
         googleUA:"UA-76676167-1",
         gitHome:githome,
         reportIssueUrl: githome + "/issues",
         changeLogUrl: githome + "/wiki/Changelog",
         wikiUrl: githome + "/wiki",
+        macAppStoreUrl: "https://itunes.apple.com/us/app/9gridhelper/id1207289111?l=zh&ls=1&mt=12",
         romanysoftHome:"//www.romanysoft.com",
         mailto:"mailto:app.romanysoft@gmail.com",
         copyright:"Copyright © " + (new Date()).getFullYear() + " Romanysoft LAB."
@@ -33,7 +35,7 @@
    ViewIndex.navBars = [
        {class:'first leaf active', href:'index.htm', aClass:'active', title:'Home'},
        {class:'leaf', href:'downloads.htm', aClass:'', title:'Downloads'},
-       {class:'leaf', href:'features/features-overview.htm', aClass:'', title:'Features'},
+       //{class:'leaf', href:'features/features-overview.htm', aClass:'', title:'Features'},
        {class:'last leaf', href:cg.reportIssueUrl, aClass:'', title:'Support'}
    ];
    ViewIndex.slidePromo = {
@@ -56,7 +58,7 @@
    }
    ViewIndex.newsShow = {
        newsList:[
-           {date: "2017-02-19", caption: appName + ' 1.0', href:""}
+           {date: "2017-02-17", caption: appName + ' 1.0', href:""}
        ]
    }
    ViewIndex.Features = {
@@ -79,18 +81,28 @@
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /// downloads.html
     var ViewDownloads = u.ViewDownloads = {};
-    ViewDownloads.menuNavs = [
-        //{class:'first leaf', href:'donate.htm', title:'Donate'},
-        {class:'leaf', href:cg.gitHome, title:'Developer'},
-        {class:'leaf', href:cg.mailto, title:'Contact'},
-        //{class:'last leaf', href:'about.htm', title:'About'}
-    ];
+    ViewDownloads.menuNavs = ViewIndex.menuNavs;
     ViewDownloads.navBars = [
-        {class:'first leaf active', href:'index.htm', aClass:'active', title:'Home'},
-        {class:'leaf', href:'downloads.htm', aClass:'', title:'Downloads'},
-        {class:'leaf', href:'features/features-overview.htm', aClass:'', title:'Features'},
+        {class:'first leaf', href:'index.htm', aClass:'', title:'Home'},
+        {class:'leaf active', href:'downloads.htm', aClass:'active', title:'Downloads'},
+        //{class:'leaf', href:'features/features-overview.htm', aClass:'', title:'Features'},
         {class:'last leaf', href:cg.reportIssueUrl, aClass:'', title:'Support'}
     ];
+    ViewDownloads.slidePromo = {
+        caption: ViewIndex.slidePromo.caption
+    };
+    ViewDownloads.download = {
+        description:"",
+        list:[
+            {
+                caption:"Download from <b>Mac App Store</b>", files:[
+                     {class:"download-box-32", title:"9GridHelper (mac app store)", href: cg.macAppStoreUrl, img:"../../common/img/download.png"}
+                ],
+                date: "2017-02-17",
+                releaseNoteUrl: cg.changeLogUrl
+            }
+        ]
+    }
 
 
 
