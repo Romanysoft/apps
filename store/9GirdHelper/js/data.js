@@ -35,7 +35,7 @@
    ViewIndex.navBars = [
        {class:'first leaf active', href:'index.htm', aClass:'active', title:'Home'},
        {class:'leaf', href:'downloads.htm', aClass:'', title:'Downloads'},
-       //{class:'leaf', href:'features/features-overview.htm', aClass:'', title:'Features'},
+       {class:'leaf', href:'features.htm', aClass:'', title:'Features'},
        {class:'last leaf', href:cg.reportIssueUrl, aClass:'', title:'Support'}
    ];
    ViewIndex.slidePromo = {
@@ -85,7 +85,7 @@
     ViewDownloads.navBars = [
         {class:'first leaf', href:'index.htm', aClass:'', title:'Home'},
         {class:'leaf active', href:'downloads.htm', aClass:'active', title:'Downloads'},
-        //{class:'leaf', href:'features/features-overview.htm', aClass:'', title:'Features'},
+        {class:'leaf', href:'features.htm', aClass:'', title:'Features'},
         {class:'last leaf', href:cg.reportIssueUrl, aClass:'', title:'Support'}
     ];
     ViewDownloads.slidePromo = {
@@ -102,7 +102,37 @@
                 releaseNoteUrl: cg.changeLogUrl
             }
         ]
-    }
+    };
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// features.html
+    var ViewFeatures = u.ViewFeatures = {};
+    ViewFeatures.menuNavs = ViewIndex.menuNavs;
+    ViewFeatures.navBars = [
+        {class:'first leaf', href:'index.htm', aClass:'', title:'Home'},
+        {class:'leaf', href:'downloads.htm', aClass:'', title:'Downloads'},
+        {class:'leaf active', href:'features.htm', aClass:'active', title:'Features'},
+        {class:'last leaf', href:cg.reportIssueUrl, aClass:'', title:'Support'}
+    ];
+    ViewFeatures.slidePromo = {
+        caption: ViewIndex.slidePromo.caption
+    };
+    ViewFeatures.features = {
+        description:"",
+        list:[
+            {caption:"Base", list:[
+                "Support hand-painted patterns",
+                "Support random pattern",
+                "Support pattern cloning"
+            ]},
+            {caption:"Advanced", list:[
+                "Support pattern storage",
+                "Support basic pattern classification, My and Library",
+                "Supports custom painted patterns"
+            ]},
+
+        ]
+    };
 
 
 

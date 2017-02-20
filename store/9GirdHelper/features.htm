@@ -15,7 +15,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="shortcut icon" href="images/logo/favicon.ico"
           type="image/vnd.microsoft.icon"/>
-
     <title>Loading....</title>
     <style>
         @import url("../../custom/styles/import.css");
@@ -28,6 +27,7 @@
     <![endif]-->
     <script src="../../common/sites/all/modules/respondjs/lib/respond.min.js"></script>
     <script src="../../common/sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js"></script>
+    <script src="../../common/sites/all/themes/multicommander/js/jquery-migrate-1.2.1.js"></script>
     <script src="../../common/misc/jquery.once.js"></script>
     <script src="../../common/misc/drupal.js"></script>
     <script src="../../common/sites/all/modules/lightbox2/js/lightbox.js"></script>
@@ -45,13 +45,13 @@
     <script src="../../common/sites/all/themes/multicommander/bootstrap/js/transition.js"></script>
     <script src="../../common/sites/all/themes/multicommander/js/responsiveslides.min.js"></script>
     <script src="../../common/sites/all/themes/multicommander/js/multicommander.js"></script>
-    <script src="../../common/sites/all/themes/multicommander/js/jquery-migrate-1.2.1.js"></script>
+
     <script src="../../custom/js/config.js"></script>
 
     <!--Google Font-->
-    <link href="https://fonts.googleapis.com/css-family=Open+Sans-300,400.css" rel='stylesheet' type='text/css' />
+    <link href="https://fonts.googleapis.com/css-family=Open+Sans-300,400.css" rel='stylesheet' type='text/css'>
 </head>
-<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-201 node-type-page">
+<body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-4 node-type-features">
 <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
 </div>
@@ -59,7 +59,14 @@
     <div id="top-header">
         <div class="region region-top-menu container">
             <section id="block-menu-menu-top-menu" class="block block-menu topbar clearfix">
-                <!--TODO-->
+
+
+                <ul class="menu nav">
+                    <li class="first leaf"><a href="/donate" title="">Donate</a></li>
+                    <li class="leaf"><a href="/developers" title="">Developer</a></li>
+                    <li class="leaf"><a href="/contact" title="">Contact</a></li>
+                    <li class="last leaf"><a href="/about" title="">About</a></li>
+                </ul>
             </section>
         </div>
     </div>
@@ -73,6 +80,7 @@
                              class="img-responsive"/>
                     </a>
 
+
                     <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -84,7 +92,7 @@
 
                 <div class="navbar-collapse collapse">
                     <nav role="navigation">
-                        <!--TODO-->
+                      <!--TODO-->
                     </nav>
                 </div>
             </div>
@@ -97,6 +105,9 @@
         <section id="block-block-12" class="block block-block inner-header clearfix">
           <!-- TODO -->
         </section>
+        <section id="block-block-13" class="block block-block inner-header-download clearfix">
+            <p><a href="downloads.htm">Download</a></p>
+        </section>
     </div>
     <div class="main-container container">
 
@@ -105,24 +116,23 @@
 
             </header> <!-- /#page-header -->
 
-            <section id="main-page-content" class="col-sm-12">
+            <section id="main-page-content" class="col-sm-8 col-sm-push-4">
                 <a id="main-content"></a>
-                <h1 class="page-header">Downloads</h1>
+                <h1 class="page-header">Features Overview</h1>
                 <div class="region region-content">
                     <section id="block-system-main" class="block block-system clearfix">
 
 
-                        <article id="node-201" class="node node-page clearfix" about="/downloads"
-                                 typeof="foaf:Document">
+                        <article id="node-4" class="node node-features clearfix" about="/features/features-overview"
+                                 typeof="sioc:Item foaf:Document">
                             <header>
-                                <span property="dc:title" content="Downloads"
+                                <span property="dc:title" content="Features Overview"
                                       class="rdf-meta element-hidden"></span><span property="sioc:num_replies"
                                                                                    content="0" datatype="xsd:integer"
                                                                                    class="rdf-meta element-hidden"></span>
                             </header>
                             <div class="field field-name-body field-type-text-with-summary field-label-hidden">
                                 <div class="field-items">
-                                  <!-- TODO -->
                                 </div>
                             </div>
                             <footer>
@@ -135,8 +145,6 @@
 
             <aside id="sidebar" class=" col-sm-4  col-sm-pull-8" role="complementary">
             </aside>  <!-- /#sidebar-first -->
-
-
         </div>
     </div>
 </div>
@@ -184,55 +192,27 @@
 </script>
 
 <!--Template-->
-<!--Template-->
 <script id="templ_slide_promo" type="text/html">
     <h2>{{ caption }}</h2>
 </script>
 
-<script id="templ_downloads" type="text/html">
+
+<!-- Template -->
+<script id="templ_features" type="text/html">
   <div class="field-item even" property="content:encoded">
-      <div class="downloads">
-          {{ #description }}
-          {{ each list as downloadObj }}
-          <h3>{{ #downloadObj.caption}}</h3>
-          <div class="view view-latest-release view-id-latest_release view-display-id-default download-box view-dom-id-07625acbafd3fee4dd0358dc19ed911c">
-              <div class="view-content">
-                  <div class="table-responsive">
-                      <table class="views-table cols-0 table table-hover table-striped">
-                          <tbody>
-                          <tr class="odd views-row-first views-row-last">
-                              <td class="views-field views-field-nothing">
-                                 {{ each downloadObj.files as fileObj }}
-                                 <div class="{{ fileObj.class }}"><a
-                                         href="{{ fileObj.href }}"><img
-                                         src="{{ fileObj.img }}"
-                                         />
-                                     {{ fileObj.title }}</a>
-                                 </div>
-                                 {{ /each }}
-                              </td>
-                              <td class="views-field views-field-field-date">
-                                  <span class="date-display-single" property="dc:date"
-                                        datatype="xsd:dateTime"
-                                        >{{ downloadObj.date }}</span>
-                              </td>
-                              <td class="views-field views-field-view-node">
-                                  <a href="{{ downloadObj.releaseNoteUrl }}">Release notes</a></td>
-                          </tr>
-                          </tbody>
-                      </table>
-                  </div>
-              </div>
+      {{ #description }}
+      {{ each list as featureKindObj }}
+        <h3> {{ featureKindObj.caption  }} </h3>
 
+        {{ each featureKindObj.list as feature }}
+           <li> {{ feature }} </li>
+        {{ /each }}
 
-          </div>
-          <p><b>100% clean. No other software will be installed.</b><br/>
-          </p>
-          <br/>
-          {{ /each }}
-      </div>
-      <hr/>
+      {{ /each }}
+
+      <p>And much, much more...</p>
   </div>
+
 </script>
 
 <!--  Footer -->
@@ -258,6 +238,7 @@
 
 <script src="js/data.js"></script>
 <script src="../../custom/romanysoft/app.js"></script>
-<script src="../../custom/romanysoft/views/downloads.js"></script>
+<script src="../../custom/romanysoft/views/features.js"></script>
+
 </body>
 </html>
