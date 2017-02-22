@@ -15,7 +15,7 @@
         reportIssueUrl: githome + "/issues",
         changeLogUrl: githome + "/wiki/Changelog",
         wikiUrl: githome + "/wiki",
-        macAppStoreUrl: "https://itunes.apple.com/us/app/9gridhelper/id1207289111?l=zh&ls=1&mt=12",
+        macAppStoreUrl: "https://itunes.apple.com/us/app/aitictactoe/id1208338536?l=zh&ls=1&mt=8",
         romanysoftHome:"//www.romanysoft.com",
         mailto:"mailto:app.romanysoft@gmail.com",
         copyright:"Copyright © " + (new Date()).getFullYear() + " Romanysoft LAB."
@@ -94,9 +94,9 @@
         list:[
             {
                 caption:"Download from <b>Mac App Store</b>", files:[
-                     {class:"download-box-32", title:"9GridHelper (mac app store)", href: cg.macAppStoreUrl, img:"../../common/img/download.png"}
+                     {class:"download-box-32", title: appName + " (mac app store)", href: cg.macAppStoreUrl, img:"../../common/img/download.png"}
                 ],
-                date: "2017-02-17",
+                date: "2017-02-22",
                 releaseNoteUrl: cg.changeLogUrl
             }
         ]
@@ -119,14 +119,12 @@
         description:"",
         list:[
             {caption:"Base", list:[
-                "Support hand-painted patterns",
-                "Support random pattern",
-                "Support pattern cloning"
+              "Support classical detection algorithm",
+              "Support fast basic AI calculation",
+              "Support visual interaction"
             ]},
             {caption:"Advanced", list:[
-                "Support pattern storage",
-                "Support basic pattern classification, My and Library",
-                "Supports custom painted patterns"
+              "Support advanced AI interface reserved for later upgrade maintenance"
             ]},
 
         ]
